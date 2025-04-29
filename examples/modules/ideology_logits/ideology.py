@@ -4,8 +4,8 @@ from datetime import datetime
 import pandas as pd
 from langchain.prompts import PromptTemplate
 
-from lib.utils import validate_json_with_schema
-from modules.ideology_logits.parse_ideology import parse_markdown
+from statements.utils import validate_json_with_schema
+from examples.modules.ideology_logits.parse_ideology import parse_markdown
 
 
 class ArticleDataset:

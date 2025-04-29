@@ -7,8 +7,8 @@ from datetime import datetime
 
 import numpy as np
 
-from lib.chat_client import ChatClient, OpenAIChatModel
-from lib.extractor import Extractor
+from statements.chat_client import ChatClient, OpenAIChatModel
+from statements.extractor import Extractor
 
 
 SEED = 42

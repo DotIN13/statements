@@ -5,3 +5,5 @@ __pycache__
 test_scripts
 test_data
 output
+
+*.egg-info

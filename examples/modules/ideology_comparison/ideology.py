@@ -5,7 +5,7 @@ import pandas as pd
 from langchain.prompts import PromptTemplate
 import tiktoken
 
-from lib.utils import validate_json_with_schema, truncate_text
+from statements.utils import validate_json_with_schema, truncate_text
 from examples.modules.ideology_comparison.parse_ideology import parse_markdown
 
 CHUNK_SIZE = 8192

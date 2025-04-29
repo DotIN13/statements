@@ -5,7 +5,7 @@ import time
 
 import httpx
 
-from lib.exceptions import (
+from statements.exceptions import (
     BadResponseException,
     CensoredResponseException,
     TooManyRequestsException

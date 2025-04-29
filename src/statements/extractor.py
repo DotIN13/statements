@@ -2,8 +2,8 @@ import asyncio
 
 from tqdm import tqdm
 
-from lib.chat_client import ChatClient
-from lib.exceptions import CensoredResponseException
+from statements.chat_client import ChatClient
+from statements.exceptions import CensoredResponseException
 
 
 class Extractor:
