@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "statements"
+version = "0.0.1"
+description = "A short description of your project."
+authors = [
+    { name="Tianyi Zhang", email="tzhang3@uchicago.edu" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "httpx[http2]",
+    "langchain",
+    "jsonschema",
+    "tqdm"
+]
+
+[tool.setuptools]
+package-dir = { "" = "lib" }
+
+[tool.setuptools.packages.find]
+where = ["lib"]

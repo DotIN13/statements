@@ -5,6 +5,7 @@ from tqdm import tqdm
 from lib.chat_client import ChatClient
 from lib.exceptions import CensoredResponseException
 
+
 class Extractor:
     def __init__(
         self,

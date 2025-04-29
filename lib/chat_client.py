@@ -11,6 +11,7 @@ from lib.exceptions import (
     TooManyRequestsException
 )
 
+
 HEADERS = {"Content-Type": "application/json", "Authorization": ""}
 
 # Default mapping of platform names to their API endpoints.
