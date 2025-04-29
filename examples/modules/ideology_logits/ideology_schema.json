@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "reasoning": {
+      "type": "string",
+      "description": "Concise explanation justifying the assigned label, including references to framing, language, emphasis, issue portrayal, or omission of information."
+    },
+    "logit_scores": {
+      "type": "object",
+      "properties": {
+        "Left": { "type": "number", "description": "Raw logit score for the Left category." },
+        "Left-Center": { "type": "number", "description": "Raw logit score for the Left-Center category." },
+        "Center": { "type": "number", "description": "Raw logit score for the Center category." },
+        "Center-Right": { "type": "number", "description": "Raw logit score for the Center-Right category." },
+        "Right": { "type": "number", "description": "Raw logit score for the Right category." }
+      },
+      "required": ["Left", "Left-Center", "Center", "Center-Right", "Right"],
+      "description": "Raw logits before softmax transformation, used for classification."
+    },
+    "softmax_probabilities": {
+      "type": "object",
+      "properties": {
+        "Left": { "type": "number", "minimum": 0, "maximum": 1, "description": "Probability for Left category after softmax normalization." },
+        "Left-Center": { "type": "number", "minimum": 0, "maximum": 1, "description": "Probability for Left-Center category after softmax normalization." },
+        "Center": { "type": "number", "minimum": 0, "maximum": 1, "description": "Probability for Center category after softmax normalization." },
+        "Center-Right": { "type": "number", "minimum": 0, "maximum": 1, "description": "Probability for Center-Right category after softmax normalization." },
+        "Right": { "type": "number", "minimum": 0, "maximum": 1, "description": "Probability for Right category after softmax normalization." }
+      },
+      "required": ["Left", "Left-Center", "Center", "Center-Right", "Right"],
+      "description": "Softmax-normalized probability distribution across classification categories."
+    },
+    "label": {
+      "type": "string",
+      "enum": ["left", "left-center", "center", "center-right", "right"],
+      "description": "Final categorical label based on the highest softmax probability."
+    }
+  },
+  "required": ["reasoning", "logit_scores", "softmax_probabilities", "label"]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "score": {
+      "type": ["number", "null"],
+      "description": "Numerical float value between -2.0 (left) and 2.0 (right), or 'NA' if unbiased."
+    },
+    "label": {
+      "type": "string",
+      "enum": ["left", "left-center", "center", "center-right", "right", "unbiased"],
+      "description": "Categorical label indicating ideological leaning of the article."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Concise explanation justifying the assigned label, including references to framing, language, emphasis, issue portrayal, or omission of information."
+    }
+  },
+  "required": ["score", "label", "reasoning"]
+}
